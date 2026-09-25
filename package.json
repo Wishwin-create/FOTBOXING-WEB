@@ -2,7 +2,7 @@
   "name": "uoc-boxing-web",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Wishwin-create.github.io/FOTBOXING-WEB",
+  
   "type": "module",
   "scripts": {
     "dev": "vite",
