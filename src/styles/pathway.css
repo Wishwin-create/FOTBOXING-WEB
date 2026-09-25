@@ -1,0 +1,206 @@
+/* Pathway page-specific styling. */
+
+.pathway-preview-card .pathway-goal-chip {
+  min-height: 96px;
+}
+
+/* Hero */
+
+.pathway-hero {
+  min-height: 310px;
+  display: flex;
+  align-items: end;
+  padding: clamp(28px, 6vw, 64px);
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  background-position: center;
+  background-size: cover;
+  box-shadow: var(--shadow);
+}
+
+.pathway-hero h2 {
+  margin: 10px 0 8px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3.6rem, 9vw, 6.6rem);
+  line-height: 0.88;
+}
+
+.pathway-hero p:not(.eyebrow) {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+/* Section spacing */
+
+.ladder-section,
+.competitive-section {
+  padding: 8px 0;
+}
+
+/* Championship ladder */
+
+.championship-ladder {
+  position: relative;
+  display: grid;
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.championship-ladder::before {
+  content: '';
+  position: absolute;
+  top: 34px;
+  bottom: 34px;
+  left: 27px;
+  width: 2px;
+  background: linear-gradient(var(--gold), var(--gold-deep));
+}
+
+.ladder-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.ladder-node {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  background: #170707;
+  color: var(--gold);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+}
+
+.ladder-content {
+  min-height: 120px;
+  padding: 20px 24px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.ladder-content h4 {
+  margin: 6px 0;
+  font-size: 1.35rem;
+}
+
+.ladder-content p:last-child {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Competitive boxing gallery — mobile-first base (2 columns) */
+
+.competitive-section .section-heading > p:last-child {
+  max-width: 680px;
+  color: var(--muted);
+}
+
+.competitive-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  column-gap: 14px;
+  row-gap: 14px;
+}
+
+.competitive-gallery img {
+  width: 100%;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+}
+
+.competitive-gallery .gallery-square {
+  aspect-ratio: 1 / 1;
+  height: auto;
+  align-self: start;
+}
+
+.competitive-gallery .gallery-large {
+  grid-row: span 2;
+  height: auto;
+  align-self: stretch;
+}
+
+.competitive-gallery .gallery-wide {
+  grid-column: span 2;
+}
+
+/* Narrative bridge */
+
+.pathway-bridge {
+  max-width: 760px;
+  margin: 8px auto;
+  color: var(--cream);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  line-height: 1;
+  text-align: center;
+}
+
+/* CTA */
+
+.pathway-cta {
+  padding: clamp(30px, 6vw, 58px);
+  text-align: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(102, 8, 8, 0.9), rgba(30, 5, 5, 0.96));
+  box-shadow: var(--shadow);
+}
+
+.pathway-cta h3 {
+  margin: 10px 0 24px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4.4rem);
+  line-height: 0.95;
+}
+
+/* Desktop gallery: 4 columns, 2 rows — the large image spans the first two columns of row one. */
+
+@media (min-width: 721px) {
+  .competitive-gallery {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: auto;
+    row-gap: 14px;
+  }
+
+  .competitive-gallery .gallery-large {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    aspect-ratio: 2 / 1;
+    align-self: start;
+  }
+
+  .competitive-gallery .gallery-top-one {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .competitive-gallery .gallery-top-two {
+    grid-column: 4;
+    grid-row: 1;
+  }
+
+  .competitive-gallery .gallery-next-line-one {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .competitive-gallery .gallery-next-line-two {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}

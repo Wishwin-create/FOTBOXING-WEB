@@ -1,0 +1,123 @@
+/* Training page-specific styling. */
+.training-preview-card .schedule-card { background: rgba(255, 242, 242, 0.06); }
+.training-preview-card > .chip-grid { width: 100%; }
+
+.training-hero {
+  min-height: 310px;
+  display: flex;
+  align-items: end;
+  padding: clamp(28px, 6vw, 64px);
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  background-position: center;
+  background-size: cover;
+  box-shadow: var(--shadow);
+}
+
+.training-hero h2 {
+  margin: 10px 0 8px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3.6rem, 9vw, 6.6rem);
+  line-height: 0.88;
+}
+
+.training-hero p:not(.eyebrow) {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.training-schedule-section,
+.benefits-section {
+  padding: 8px 0;
+}
+
+.training-schedule-grid,
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.training-schedule-card,
+.benefit-card {
+  min-height: 210px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(255, 82, 82, 0.09), rgba(143, 16, 16, 0.1)), var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.training-card-icon {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 2rem;
+}
+
+.training-schedule-card h4 {
+  margin: 10px 0;
+  font-size: 1.18rem;
+  line-height: 1.35;
+}
+
+.training-location {
+  margin: 0;
+  color: var(--muted);
+}
+
+.training-facilities-section {
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+}
+
+.training-facilities-section .feature-copy p:not(.section-tag) + p {
+  margin-top: 12px;
+}
+
+.benefit-card {
+  position: relative;
+  min-height: 190px;
+}
+
+.benefit-number {
+  color: var(--gold);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem;
+}
+
+.benefit-card h4 {
+  margin: 12px 0 8px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+}
+
+.benefit-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.training-cta {
+  padding: clamp(30px, 6vw, 58px);
+  text-align: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(102, 8, 8, 0.9), rgba(30, 5, 5, 0.96));
+  box-shadow: var(--shadow);
+}
+
+.training-cta h3 {
+  max-width: 720px;
+  margin: 10px auto 24px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.3rem, 5vw, 4.2rem);
+  line-height: 0.95;
+}
+
+@media (max-width: 1080px) {
+  .training-schedule-grid,
+  .benefits-grid,
+  .training-facilities-section {
+    grid-template-columns: 1fr;
+  }
+}

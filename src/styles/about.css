@@ -1,0 +1,173 @@
+/* About page-specific styling. */
+
+.action-card .chip-grid {
+  width: 100%;
+}
+
+.about-hero {
+  min-height: 310px;
+  display: flex;
+  align-items: end;
+  padding: clamp(28px, 6vw, 64px);
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  background-position: center;
+  background-size: cover;
+  box-shadow: var(--shadow);
+}
+
+.about-hero h2 {
+  margin: 10px 0 8px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3.6rem, 9vw, 6.6rem);
+  line-height: 0.88;
+}
+
+.about-hero p:not(.eyebrow) {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.origin-story {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 34px;
+  padding: clamp(24px, 5vw, 52px);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: linear-gradient(
+    135deg,
+    rgba(143, 16, 16, 0.22),
+    rgba(255, 82, 82, 0.06)
+  ), var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.origin-story .section-heading {
+  margin: 0;
+}
+
+.origin-story h3 {
+  margin-top: 10px;
+}
+
+.origin-story-copy {
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.origin-story-copy p:first-child {
+  color: var(--cream);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.coach-bio {
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+}
+
+.coach-bio .feature-image-wrap {
+  width: 100%;
+  height: clamp(320px, 45vw, 540px);
+  align-self: stretch;
+  display: flex;
+  align-items: stretch;
+}
+
+.about-coach-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: #120606;
+  border-radius: 28px;
+}
+
+.coach-bio .feature-image-wrap {
+  overflow: visible;
+  width: 100%;
+  height: clamp(320px, 45vw, 540px);
+  align-self: stretch;
+  display: flex;
+  align-items: stretch;
+}
+
+.coach-bio .feature-image.about-coach-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: #120606;
+}
+
+.coach-credentials {
+  color: var(--gold) !important;
+  font-weight: 800;
+}
+
+.team-participation {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+}
+
+.about-team-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.about-team-gallery img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.about-team-gallery img:first-child {
+  grid-row: span 2;
+  height: 392px;
+}
+
+.about-cta {
+  padding: clamp(30px, 6vw, 58px);
+  text-align: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 28px;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 8, 8, 0.9),
+    rgba(30, 5, 5, 0.96)
+  );
+  box-shadow: var(--shadow);
+}
+
+.about-cta h3 {
+  margin: 10px auto 24px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.3rem, 5vw, 4.2rem);
+  line-height: 0.95;
+}
+
+@media (max-width: 900px) {
+  .origin-story,
+  .coach-bio,
+  .team-participation {
+    grid-template-columns: 1fr;
+  }
+
+  .coach-bio .feature-image-wrap {
+    height: auto;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .about-team-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .about-team-gallery img:first-child {
+    grid-row: auto;
+    height: 240px;
+  }
+}

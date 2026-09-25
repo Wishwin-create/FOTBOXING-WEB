@@ -1,0 +1,40 @@
+/* Home page-specific styling. Shared design lives in ../styles.css. */
+
+.home-page .home-hero {
+  isolation: isolate;
+}
+
+.home-page .split-feature .feature-copy {
+  padding-right: 4%;
+}
+
+.home-page .facilities-feature .feature-copy {
+  padding-left: 4%;
+}
+
+.home-page .join-banner {
+  margin-top: 2px;
+}
+
+.home-page .coach-teaser-image {
+  object-fit: contain;
+  object-position: center;
+  background: #000000;
+}
+
+.link-arrow {
+  flex: 0 0 auto;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.facebook-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 7px;
+  padding: 3px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  vertical-align: middle;
+}
